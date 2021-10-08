@@ -1,11 +1,9 @@
-.wd-icon-img{
-    border-radius: 50%;
-    height:50px;
-}
+
 .btn-bgd{
     margin-top:15px;
     border-radius: 15px;
     width:100%;
+
 }
 .wd-search-bar {
     border-radius: 10px ;
@@ -28,24 +26,22 @@
     color:dodgerblue;
 }
 .wd-page{
-    margin-top:30px;
+    margin: 30px auto 30px auto;
+    padding-left:0;
+    padding-right:0;
 }
 .wd-search-margin{
     margin-bottom: 12px;
 }
 .wd-nav{
     font-weight:600;
+    font-size:15px;
 }
 .wd-btn{
-margin:auto;
-}
-.wd-card-img{
-    width:100%;
     margin-top:auto;
     margin-bottom: auto;
-    border-radius:12px;
-    display:block;
-    align-items:center;
+    z-index: 10;
+    font-size:8px;
 }
 .wd-row{
     margin:0;
@@ -66,5 +62,8 @@ margin:auto;
     font-size: 30px;
     color:white;
     font-weight: bold;
-    margin-top: 55%;
+    margin-top: 50%;
     }
+.zindex{
+    z-index:100;
+}
