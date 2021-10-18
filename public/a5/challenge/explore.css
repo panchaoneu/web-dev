@@ -1,0 +1,73 @@
+/*search bar*/
+.wd-search input[type= text] {
+    height:40px;
+    width: 80%;
+    border-radius: 20px;
+    background-color:#A9A9A9;
+    float:left;
+}
+::placeholder{color:white;font-size:20px}
+
+.wd-setting-btn{
+    /*position:absolute;*/
+    /*right:12px;*/
+    height:50px;
+    /*float:left;*/
+    color:dodgerblue;
+    font-size:40px;
+    cursor:pointer;
+    padding-left:15%;
+    border: none;
+    background-color:black;
+}
+.wd-grid-row{
+    font-size: 25px;
+
+}
+.wd-labelled-color{
+    color: #1AA1F2;
+    float:left;
+    padding:16px;
+}
+.wd-unlabelled-color{
+    color:#6E767D;
+    float:left;
+    padding:16px;
+}
+.wd-title2 {
+    color:#6E767D;
+    font-size: 13px;
+}
+.wd-title1 {
+    color:White;
+    font-size: 25px;
+}
+.wd-tweets-number {
+    color:#6E767D;
+    font-size: 10px;
+}
+
+.wd-float-right{
+    float:right;
+    height:100px;
+    margin-right:16px;
+    border-radius:10px;
+}
+.wd-float-done{
+    clear:both;
+}
+.wd-float-left{
+    float:left;
+}
+.wd-hr-thin{
+    border-top: 1px solid #8c8b8b;
+}
+
+
+
+
+
+
+
+
+

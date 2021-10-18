@@ -1,0 +1,69 @@
+
+.btn-bgd{
+    margin-top:15px;
+    border-radius: 15px;
+    width:100%;
+
+}
+.wd-search-bar {
+    border-radius: 10px ;
+    color:dimgrey;
+    border-color:darkgrey;
+    position:relative;
+}
+.wd-search-icon{
+    /*position:relative;*/
+    /*left:30px;*/
+    z-index:10;
+    position:absolute;
+    left:30px;
+    top:12px;
+}
+.wd-field{
+ padding-left: 40px;
+}
+.wd-configuration{
+    color:dodgerblue;
+}
+.wd-page{
+    margin: 30px auto 30px auto;
+    padding-left:0;
+    padding-right:0;
+}
+.wd-search-margin{
+    margin-bottom: 12px;
+}
+.wd-nav{
+    font-weight:600;
+    font-size:15px;
+}
+.wd-btn{
+    margin-top:auto;
+    margin-bottom: auto;
+    z-index: 10;
+    font-size:8px;
+}
+.wd-row{
+    margin:0;
+    padding:0;
+}
+.wd-card-padding{
+    padding:0;
+}
+.wd-note{
+    color:grey;
+    font-size:12px;
+}
+.wd-news-title{
+    font-size:12px;
+    font-weight: bold;
+}
+.wd-caption{
+    font-size: 30px;
+    color:white;
+    font-weight: bold;
+    margin-top: 50%;
+    }
+.zindex{
+    z-index:100;
+}
