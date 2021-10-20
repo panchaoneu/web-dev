@@ -243,23 +243,8 @@ const init = () => {
     showBtn.click(showHandler);
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
 $(init);
-
-
 
 
 

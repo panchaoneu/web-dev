@@ -9,4 +9,3 @@ const TodoItem = (todo) => {
     `);
 }
 export default TodoItem;
-
