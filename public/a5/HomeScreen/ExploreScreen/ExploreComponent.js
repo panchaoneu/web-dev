@@ -1,7 +1,7 @@
-import PostSummaryList from "../PostSummaryList/PostSummaryList.js";
+import PostList from "../PostSummaryList/PostList.js";
 
 const ExploreComponent = () => {
-    return (`
+    return(`
             <div class="row  wd-search-margin">
                 <div class="col-10 wd-search-bar">
                 <i class="fas fa-search wd-search-icon"></i>
@@ -9,7 +9,7 @@ const ExploreComponent = () => {
                 </div>
             </div>
            
-           <ul class="nav nav-tabs wd-nav">
+           <ul class="nav nav-tabs wd-nav wd-search-margin">
             <li class="nav-item">
                 <a class="nav-link active" href="for-you.html">For you</a>
             </li>
@@ -27,12 +27,10 @@ const ExploreComponent = () => {
             </li>
         </ul>
         
-        <div class="card">
-        <img class="img-responsive" src="SPACEX.jpg">
-            <div class="card-img-overlay wd-caption">SpaceX's Starship</div>
-           <!-- image with overlaid text -->
-           ${PostSummaryList()}
-</div>
+        <div>
+         ${PostList()}
+         </div>
+        
         
     `);
 }
