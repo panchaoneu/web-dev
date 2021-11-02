@@ -9,32 +9,29 @@ import Practice from "./component/a6/Practice";
 import Build from "./component/a6/Build";
 import {Route, BrowserRouter} from "react-router-dom";
 import ExploreScreen from "./component/a6/Build/ExploreScreen";
-import TodoList from "./component/a6/Practice/Todo/TodoList";
+import HomeScreen from "./component/a6/Build/HomeScreen/HomeScreen";
 
 function App() {
   return (
       <BrowserRouter>
-        <div className="container">
-          <Route path="a6/hello" exact={true}>
-            <HelloWorld/>
+
+            <div className="container">
+          <Route path="/a6/hello" exact={true}>
+           <HelloWorld/>
           </Route>
 
-          <Route path={["/", "/a6","a6/practice"]} exact={true}>
+          <Route path={["/", "/a6","/a6/practice"]} exact={true}>
              <Practice/>
           </Route>
 
-            <Route path="a6/build" exact={true}>
+            <Route path="/a6/build" exact={true}>
                 <Build/>
             </Route>
 
+            <Route path ="/a6/twitter/explore" component={ExploreScreen}/>
+            <Route path ="/a6/twitter/home" component={HomeScreen}/>
 
-          {/*<Route path="/build" exact={true}>*/}
-          {/*  <Build/>*/}
-          {/*</Route>*/}
-
-            <Route path ="a6/twitter/explore" exact={true} component={ExploreScreen}/>
-
-        </div>
+            </div>
       </BrowserRouter>
 
   );

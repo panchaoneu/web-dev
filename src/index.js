@@ -11,13 +11,13 @@ import ExploreScreen from "./component/a6/Build/ExploreScreen";
 import HomeScreen from "./component/a6/Build/HomeScreen/HomeScreen";
 
 ReactDOM.render(
-        // <App />,
+        <App />,
     // <NavigationSidebar active= "explore"/>,
     // <WhoToFollowListItem/>,
     // <WhoToFollowList/>,
     // <PostSummaryList/>,
     //  <ExploreScreen/>,
-    <HomeScreen/>,
+    // <HomeScreen/>,
    document.getElementById('root')
 );
 
