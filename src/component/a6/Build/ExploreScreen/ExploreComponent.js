@@ -13,23 +13,23 @@ const ExploreComponent = () => {
 
             <ul className="nav nav-tabs wd-nav wd-search-margin">
                 <li className="nav-item">
-                    <a className="nav-link active" href="/#">For you</a>
+                    <a className="nav-link active" href={"/"}>For you</a>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link" href="/#">Trending</a>
+                    <a className="nav-link" href={"/"}>Trending</a>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link" href="/#">News</a>
+                    <a className="nav-link" href={"/"}>News</a>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link" href="/#">Sports</a>
+                    <a className="nav-link" href={"/"}>Sports</a>
                 </li>
                 <li className="nav-item d-none d-md-block">
-                    <a className="nav-link" href="/#">Entertainment</a>
+                    <a className="nav-link" href={"/"}>Entertainment</a>
                 </li>
             </ul>
             <div className="card">
-                <img className="img-responsive" src={'../../../image/SPACEX.jpg'}/>
+                <img className="img-responsive" src={'../../../image/SPACEX.jpg'} alt={""}/>
                     <div className="card-img-overlay wd-caption">SpaceX's Starship</div>
             <div>
                 <PostSummaryList/>
