@@ -163,7 +163,7 @@ const init = () => {
     /* do the rest of the work here */
 
     const bindById = $('#bind-by-id');
-    const bindByClass = $('.bind-by-class');
+    const bindByclass = $('.bind-by-class');
     console.log('Binding to DOM');
     console.log(bindById);
     console.log(bindByClass);

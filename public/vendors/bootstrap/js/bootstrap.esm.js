@@ -767,11 +767,11 @@ const DATA_KEY$c = 'bs.alert';
 const EVENT_KEY$c = `.${DATA_KEY$c}`;
 const EVENT_CLOSE = `close${EVENT_KEY$c}`;
 const EVENT_CLOSED = `closed${EVENT_KEY$c}`;
-const CLASS_NAME_FADE$5 = 'fade';
-const CLASS_NAME_SHOW$8 = 'show';
+const class_NAME_FADE$5 = 'fade';
+const class_NAME_SHOW$8 = 'show';
 /**
  * ------------------------------------------------------------------------
- * Class Definition
+ * class Definition
  * ------------------------------------------------------------------------
  */
 
@@ -789,9 +789,9 @@ class Alert extends BaseComponent {
       return;
     }
 
-    this._element.classList.remove(CLASS_NAME_SHOW$8);
+    this._element.classList.remove(class_NAME_SHOW$8);
 
-    const isAnimated = this._element.classList.contains(CLASS_NAME_FADE$5);
+    const isAnimated = this._element.classList.contains(class_NAME_FADE$5);
 
     this._queueCallback(() => this._destroyElement(), this._element, isAnimated);
   } // Private
@@ -855,12 +855,12 @@ const NAME$c = 'button';
 const DATA_KEY$b = 'bs.button';
 const EVENT_KEY$b = `.${DATA_KEY$b}`;
 const DATA_API_KEY$7 = '.data-api';
-const CLASS_NAME_ACTIVE$3 = 'active';
+const class_NAME_ACTIVE$3 = 'active';
 const SELECTOR_DATA_TOGGLE$5 = '[data-bs-toggle="button"]';
 const EVENT_CLICK_DATA_API$6 = `click${EVENT_KEY$b}${DATA_API_KEY$7}`;
 /**
  * ------------------------------------------------------------------------
- * Class Definition
+ * class Definition
  * ------------------------------------------------------------------------
  */
 
@@ -873,7 +873,7 @@ class Button extends BaseComponent {
 
   toggle() {
     // Toggle class and sync the `aria-pressed` attribute with the return value of the `.toggle()` method
-    this._element.setAttribute('aria-pressed', this._element.classList.toggle(CLASS_NAME_ACTIVE$3));
+    this._element.setAttribute('aria-pressed', this._element.classList.toggle(class_NAME_ACTIVE$3));
   } // Static
 
 
@@ -1112,12 +1112,12 @@ const EVENT_POINTERUP = `pointerup${EVENT_KEY$a}`;
 const EVENT_DRAG_START = `dragstart${EVENT_KEY$a}`;
 const EVENT_LOAD_DATA_API$2 = `load${EVENT_KEY$a}${DATA_API_KEY$6}`;
 const EVENT_CLICK_DATA_API$5 = `click${EVENT_KEY$a}${DATA_API_KEY$6}`;
-const CLASS_NAME_CAROUSEL = 'carousel';
-const CLASS_NAME_ACTIVE$2 = 'active';
-const CLASS_NAME_SLIDE = 'slide';
-const CLASS_NAME_END = 'carousel-item-end';
-const CLASS_NAME_START = 'carousel-item-start';
-const CLASS_NAME_NEXT = 'carousel-item-next';
+const class_NAME_CAROUSEL = 'carousel';
+const class_NAME_ACTIVE$2 = 'active';
+const class_NAME_SLIDE = 'slide';
+const class_NAME_END = 'carousel-item-end';
+const class_NAME_START = 'carousel-item-start';
+const class_NAME_NEXT = 'carousel-item-next';
 const CLASS_NAME_PREV = 'carousel-item-prev';
 const CLASS_NAME_POINTER_EVENT = 'pointer-event';
 const SELECTOR_ACTIVE$1 = '.active';
@@ -1423,8 +1423,8 @@ class Carousel extends BaseComponent {
 
     const isCycling = Boolean(this._interval);
     const isNext = order === ORDER_NEXT;
-    const directionalClassName = isNext ? CLASS_NAME_START : CLASS_NAME_END;
-    const orderClassName = isNext ? CLASS_NAME_NEXT : CLASS_NAME_PREV;
+    const directionalclass = isNext ? CLASS_NAME_START : CLASS_NAME_END;
+    const orderclass = isNext ? CLASS_NAME_NEXT : CLASS_NAME_PREV;
 
     const eventDirectionName = this._orderToDirection(order);
 
@@ -1468,15 +1468,15 @@ class Carousel extends BaseComponent {
     };
 
     if (this._element.classList.contains(CLASS_NAME_SLIDE)) {
-      nextElement.classList.add(orderClassName);
+      nextElement.classList.add(orderclass);
       reflow(nextElement);
-      activeElement.classList.add(directionalClassName);
-      nextElement.classList.add(directionalClassName);
+      activeElement.classList.add(directionalclass);
+      nextElement.classList.add(directionalclass);
 
       const completeCallBack = () => {
-        nextElement.classList.remove(directionalClassName, orderClassName);
+        nextElement.classList.remove(directionalclass, orderclass);
         nextElement.classList.add(CLASS_NAME_ACTIVE$2);
-        activeElement.classList.remove(CLASS_NAME_ACTIVE$2, orderClassName, directionalClassName);
+        activeElement.classList.remove(CLASS_NAME_ACTIVE$2, orderclass, directionalclass);
         this._isSliding = false;
         setTimeout(triggerSlidEvent, 0);
       };
@@ -2495,7 +2495,7 @@ class ScrollBarHelper {
  * --------------------------------------------------------------------------
  */
 const Default$7 = {
-  className: 'modal-backdrop',
+  class: 'modal-backdrop',
   isVisible: true,
   // if false, we use the backdrop helper without adding any element to the dom
   isAnimated: false,
@@ -2504,7 +2504,7 @@ const Default$7 = {
   clickCallback: null
 };
 const DefaultType$7 = {
-  className: 'string',
+  class: 'string',
   isVisible: 'boolean',
   isAnimated: 'boolean',
   rootElement: '(element|string)',
@@ -2559,7 +2559,7 @@ class Backdrop {
   _getElement() {
     if (!this._element) {
       const backdrop = document.createElement('div');
-      backdrop.className = this._config.className;
+      backdrop.class = this._config.class;
 
       if (this._config.isAnimated) {
         backdrop.classList.add(CLASS_NAME_FADE$4);
@@ -3316,7 +3316,7 @@ class Offcanvas extends BaseComponent {
 
   _initializeBackDrop() {
     return new Backdrop({
-      className: CLASS_NAME_BACKDROP,
+      class: CLASS_NAME_BACKDROP,
       isVisible: this._config.backdrop,
       isAnimated: true,
       rootElement: this._element.parentNode,

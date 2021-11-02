@@ -13,8 +13,8 @@ import WhoToFollowList from "../WhoToFollowList/WhoToFollowList.js";
 
    
     <div class="d-sm-none d-md-none d-lg-block col-lg-4 col-xl-4">
-             ${WhoToFollowList()}
          </div>
+             ${WhoToFollowList()}
          </div>
     `);
 })($);
