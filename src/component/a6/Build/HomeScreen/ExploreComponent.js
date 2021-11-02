@@ -13,19 +13,19 @@ const ExploreComponent = () => {
 
             <ul className="nav nav-tabs wd-nav wd-search-margin">
                 <li className="nav-item">
-                    <a className="nav-link active" href="/for-you.html">For you</a>
+                    <a className="nav-link active" href={"/"}>For you</a>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link" href="/Trending.html">Trending</a>
+                    <a className="nav-link" href={"/"}>Trending</a>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link" href="/News.html">News</a>
+                    <a className="nav-link" href={"/"}>News</a>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link" href="/Sports.html">Sports</a>
+                    <a className="nav-link" href={"/"}>Sports</a>
                 </li>
                 <li className="nav-item d-none d-md-block">
-                    <a className="nav-link" href="/Entertainment.html">Entertainment</a>
+                    <a className="nav-link" href={"/"}>Entertainment</a>
                 </li>
             </ul>
 

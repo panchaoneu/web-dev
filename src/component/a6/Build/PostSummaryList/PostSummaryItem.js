@@ -22,7 +22,7 @@ const PostSummaryItem = (
 
                             </div>
                             <div class="col-2">
-                                <img class="img-fluid rounded" src={posts.image}/>
+                                <img class="img-fluid rounded" src={posts.image} alt={""}/>
                             </div>
                         </div>
                     </li>
