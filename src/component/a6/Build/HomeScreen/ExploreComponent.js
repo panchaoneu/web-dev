@@ -1,6 +1,5 @@
 import React from "react";
-import PostSummaryList from "../PostSummaryList/PostSummaryList";
-
+import PostList from "../HomePostList/PostList";
 const ExploreComponent = () => {
     return(
         <>
@@ -30,7 +29,7 @@ const ExploreComponent = () => {
             </ul>
 
             <div>
-                <PostSummaryList/>
+                <PostList/>
             </div>
         </>
 
