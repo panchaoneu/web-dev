@@ -4,15 +4,16 @@ import {useDispatch, useSelector} from "react-redux";
 const Profile = () => {
     const profile= useSelector(state=>state.profile.profile);
     const [localProfile, setLocalProfile] = useState(profile);
+    const dispatch = useDispatch();
     const EditProfileClickHandler = (event) =>{
-        setLocalProfile({...profile,username:event.target.value})
-        const dispatch = useDispatch();
-        const save=()=>{
-            dispatch({type:'update-profile',
-                profile: localProfile
-            })
-        }
+        setLocalProfile({...profile,firstName:event.target.firstName})
+
     }
+    // const save=()=>{
+    //     dispatch({type:'update-profile',
+    //         profile: localProfile
+    //     })
+    // }
     return(
         <div>
             <h3>Profile</h3>
@@ -31,6 +32,8 @@ const Profile = () => {
                     Edit profile
                 </button>
             </div>
+
+
 
             <div className="text-white fw-bold" >
                 {profile.firstName} {profile.lastName}
@@ -69,6 +72,8 @@ const Profile = () => {
                     {profile.followerCount}
                 </span> Follower
             </div>
+
+
         </div>
     );
 };
