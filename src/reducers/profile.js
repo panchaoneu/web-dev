@@ -6,17 +6,22 @@ const initialState = {
 
 const profile = (state = initialState,action) => {
     switch(action.type){
-        case 'update-profile':
+        case 'save-edit':
             return(
                 {
-                    profile: action.profile,
-                    firstName:action.firstName,
-                    lastName:action.lastName,
-                    bio:action.bio,
-                    location:action.website,
-                    dateOfBirth:action.dateOfBirth
+                    profile: {
+                        firstName:action.firstName,
+                        lastName:action.lastName,
+                        bio:action.bio,
+                        location:action.location,
+                        website:action.website,
+                        dateOfBirth:action.dateOfBirth
+                    }
+
                 });
         case 'exit-edit':
+            return(state);
+        case 'no-edit':
             return(state);
         default:
             return(state);

@@ -5,62 +5,79 @@ import {Link} from "react-router-dom";
 const EditProfile = ()=> {
     const userProfile = useSelector((state)=>state.profile.profile);
 
-    const [firstName, setFirstName]=useState(userProfile.firstName);
-    const [lastName, setLastName] = useState(userProfile.lastName);
-    const [bio, setBio] = useState(userProfile.bio);
-    const [location, setLocation] = useState(userProfile.location);
-    const [website, setWebsite] = useState(userProfile.website);
-    const [dateOfBirth, setDateOfBirth] = useState(userProfile.dateOfBirth);
-
+    let [localFirstName, setFirstName]=useState(userProfile.firstName);
+    let [localLastName, setLastName] = useState(userProfile.lastName);
+    let [localBio, setBio] = useState(userProfile.bio);
+    let [localLocation, setLocation] = useState(userProfile.location);
+    let [localWebsite, setWebsite] = useState(userProfile.website);
+    let [localDateOfBirth, setDateOfBirth] = useState(userProfile.dateOfBirth);
 
     const dispatch= useDispatch();
-    const SaveEditClickHandler= () => {
-        dispatch({
+    // const saveEditClickHandler= () => {
+    //     dispatch({
+    //         type:'save-edit',
+    //         firstName: firstName,
+    //         lastName: lastName,
+    //         bio:bio,
+    //         location: location,
+    //         website: website,
+    //         dateOfBirth:dateOfBirth
+    //         });
+    //     dispatch({
+    //         type: 'no-edit'
+    //     });
+    // }
+
+    const saveEditClickHandler=()=>{
+        const action={
             type:'save-edit',
-            firstName: firstName,
-            lastName: lastName,
-            bio:bio,
-            location: location,
-            website: website,
-            dateOfBirth:dateOfBirth
-            }
-        );
-        dispatch({
-            type: 'no-edit'
-        });
+            firstName: localFirstName,
+            lastName: localLastName,
+            bio:localBio,
+            location: localLocation,
+            website: localWebsite,
+            dateOfBirth:localDateOfBirth
+        };
+        dispatch(action);
+        window.location.href="/a7/twitter/profile";
     }
 
-    const ExitEditClickHandler =() => {
+    const exitEditClickHandler =() => {
         dispatch({
             type: 'exit-edit'
         });
-        dispatch({type: 'no-edit'});
+        // dispatch({type: 'no-edit'});
     }
 
         return(
             <>
             <div className="d-flex">
-                <i className="fas fa-times text-white p-3" onClick={ExitEditClickHandler}></i>
+                <Link to="/a7/twitter/profile">
+                <i className="fas fa-times text-white p-3"
+                   onClick={exitEditClickHandler}></i> </Link>
                 <div className="text-white fw-bold ms-3 d-flex flex-grow-1 align-items-center">
                     Edit Profile
                 </div>
-                <button className="fas fa-times text-white p-3">
-                    onClick={SaveEditClickHandler}
+
+                <button className="btn btn-sm bg-white text-black rounded-pill ps-3 p3-3 fw-bold"
+                    onClick={saveEditClickHandler}>
                     Save
                 </button>
+
             </div>
 
                 <div className="position-relative">
-                    <img className="rounded-circle ms-3" src="../../../../../public/image/jose.JPG"/>
-                    <div className="ms-3 mt-3">
+                        <img className=" card-image"  src={'../../../image/banner.jpg'} alt={""}/>
+                        <img className="profile-image rounded-circle " src={'../../../image/jose.jpg'} alt={""}/>
+                        <div className="ms-3 mt-3">
                         <form className="form-floating">
                             <input
                                 className="form-control bg-black border-1 border-secondary text-white"
                                 id="inputFirstName"
                                 type="text"
                                 placeholder="First"
-                                value={firstName}
-                                onChange={(event)=>setFirstName(event.target.value)}/>
+                                onChange={(event)=>setFirstName(event.target.value)}
+                                value={localFirstName}/>
                                 <label htmlFor="inputFirstName">First Name</label>
                         </form>
 
@@ -70,8 +87,8 @@ const EditProfile = ()=> {
                                 id="inputLastName"
                                 type="text"
                                 placeholder="Last"
-                                value={lastName}
-                                onChange={(event)=>setLastName(event.target.value)}/>
+                                onChange={(event)=>setLastName(event.target.value)}
+                                value={localLastName}/>
                                 <label htmlFor="inputLastName">Last Name</label>
                         </form>
 
@@ -81,7 +98,7 @@ const EditProfile = ()=> {
                                 id="inputBio"
                                 type="text"
                                 placeholder="About me"
-                                value = {bio}
+                                value = {localBio}
                                 onChange = {(event)=>setBio(event.target.value)}></textarea>
                             <label htmlFor="inputBio">Bio</label>
                         </form>
@@ -92,7 +109,7 @@ const EditProfile = ()=> {
                                 id="inputLocation"
                                 type="text"
                                 placeholder="City, ST"
-                                value ={location}
+                                value ={localLocation}
                                 onChange={(event)=>setLocation(event.target.value)}/>
                                 <label htmlFor="inputLocation">Location</label>
                         </form>
@@ -103,7 +120,7 @@ const EditProfile = ()=> {
                                 id="inputWebsite"
                                 type="url"
                                 placeholder="mywebsite@domain.com"
-                                value={website}
+                                value={localWebsite}
                                 onChange={(event)=>setWebsite(event.target.value)}/>
                                 <label htmlFor="inputWebsite">Website</label>
                         </form>
@@ -113,8 +130,8 @@ const EditProfile = ()=> {
                                 className="form-control bg-black border-1 border-secondary text-white"
                                 id="inputDateOfBirth"
                                 type="date"
-                                placeholder="01/01/2000"
-                                value={dateOfBirth}
+                                placeholder="2000-01-01"
+                                value={localDateOfBirth}
                                 onChange={(event) => setDateOfBirth(event.target.value)}/>
                                 <label htmlFor="inputDateOfBirth">Birth date</label>
                         </form>

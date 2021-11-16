@@ -1,10 +1,9 @@
-import React, {useState} from "react";
+import React from "react";
 import NavigationSidebar from "../NavigationSidebar/index.js";
-import Profile from "./Profile";
 import PostSummaryList from "../PostSummaryList";
+import EditProfile from "./EditProfile";
 
-const ProfileScreen=()=> {
-    const profile = useState(true);
+const EditProfileScreen=()=> {
     return(
         <div className="container">
             <div className="row mt-2">
@@ -12,7 +11,7 @@ const ProfileScreen=()=> {
                     <NavigationSidebar active="profile"/>
                 </div>
 
-                <div className="col-9 col-lg-6 wd-left"><Profile/></div>
+                <div className="col-9 col-lg-6 wd-left"><EditProfile/></div>
 
                 <div className="d-sm-none d-md-none d-lg-block col-lg-4 col-xl-4">
                     <PostSummaryList/>
@@ -24,4 +23,4 @@ const ProfileScreen=()=> {
 
 };
 
-export default ProfileScreen;
+export default EditProfileScreen;
