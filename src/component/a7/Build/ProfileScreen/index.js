@@ -4,7 +4,6 @@ import Profile from "./Profile";
 import PostSummaryList from "../PostSummaryList";
 
 const ProfileScreen=()=> {
-    const profile = useState(true);
     return(
         <div className="container">
             <div className="row mt-2">

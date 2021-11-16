@@ -39,7 +39,6 @@ const EditProfile = ()=> {
             dateOfBirth:localDateOfBirth
         };
         dispatch(action);
-        window.location.href="/a7/twitter/profile";
     }
 
     const exitEditClickHandler =() => {
@@ -59,10 +58,10 @@ const EditProfile = ()=> {
                     Edit Profile
                 </div>
 
-                <button className="btn btn-sm bg-white text-black rounded-pill ps-3 p3-3 fw-bold"
+                <Link to="/a7/twitter/profile" className="btn btn-sm bg-white text-black rounded-pill ps-3 p3-3 fw-bold"
                     onClick={saveEditClickHandler}>
                     Save
-                </button>
+                </Link>
 
             </div>
 
