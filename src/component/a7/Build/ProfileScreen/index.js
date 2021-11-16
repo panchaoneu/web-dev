@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import NavigationSidebar from "../NavigationSidebar/index.js";
 import Profile from "./Profile";
 import PostSummaryList from "../PostSummaryList";
