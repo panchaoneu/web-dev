@@ -29,7 +29,7 @@ const MovieApiClient = () => {
     }
 
     const saveMovie=()=>{
-        fetch('http://localhost:4000/api/movies/${movie._id}',{
+        fetch(`http://localhost:4000/api/movies/${movie._id}`,{
             method: 'PUT',
             headers:{
                 'content-type':'application/json'
