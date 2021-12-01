@@ -29,7 +29,6 @@ const MovieApiClient = () => {
     }
 
     const saveMovie=()=>{
-        console.log('inside save ');
         fetch(`http://localhost:4000/api/movies/${movie._id}`,{
             method: 'PUT',
             headers:{
@@ -41,8 +40,7 @@ const MovieApiClient = () => {
             .then(movies=>setMovies((movies)));
     }
 
-   console.log("here");
-    console.log(movies);
+
     return(
         <div>
             <h2>Movies</h2>
