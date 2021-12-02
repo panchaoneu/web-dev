@@ -3,9 +3,10 @@ import React, {useEffect, useState} from "react";
 const MovieApiClient = () => {
     const [movies,setMovies] = useState([]);
     const [movie, setMovie] = useState({title:'', rating:2.5});
-    const onMovieTitleChange = (event) => {console.log(event.target.value);
+    const onMovieTitleChange = (event) => {
     setMovie({...movie, title:event.target.value});}
-    const createMovieClickHandler = ()=>fetch('http://localhost:4000/api/movies',{
+    const createMovieClickHandler = () =>
+        fetch('http://localhost:4000/api/movies',{
         method:'POST',
         body: JSON.stringify(movie),
         headers:{
@@ -13,9 +14,10 @@ const MovieApiClient = () => {
         }
     })
         .then(response=>response.json())
-        .then(movies=>setMovie(movies));
+        .then(movies=>setMovies(movies));
 
-    useEffect(() =>{fetch('http://localhost:4000/api/movies')
+    useEffect(() =>
+        {fetch('http://localhost:4000/api/movies')
         .then(response => response.json())
         .then(movies => setMovies(movies))}
             , []);
@@ -41,8 +43,6 @@ const MovieApiClient = () => {
             .then(movies=>setMovies((movies)));
     }
 
-   console.log("here");
-    console.log(movies);
     return(
         <div>
             <h2>Movies</h2>
@@ -50,10 +50,6 @@ const MovieApiClient = () => {
                 <input className="form-control" value={movie.title}
                        onChange={onMovieTitleChange}
                        style={{width: "70%"}}/>
-                <button onClick={saveMovie}
-                        className="btn btn-primary ms-2 float-end ">
-                    Save
-                </button>
 
                 <button onClick={createMovieClickHandler}
                         className="btn btn-success float-end ">
@@ -62,8 +58,6 @@ const MovieApiClient = () => {
             </div>
             <br/>
             <br/>
-
-
 
             <ul className="list-group">
                 {
@@ -78,6 +72,10 @@ const MovieApiClient = () => {
                             <button onClick={()=> setMovie(movie)}
                                     className="btn btn-primary float-end ms-2">
                                 Edit
+                            </button>
+                            <button onClick={saveMovie}
+                                    className="btn btn-primary ms-2 float-end ">
+                                Save
                             </button>
 
                         </li>
