@@ -18,16 +18,24 @@ const EditProfile = ()=> {
     useEffect(()=>getCurrentProfile(dispatch),[]);
 
     const saveEditClickHandler=()=>{
-        const action={
-            type:'save-edit',
+        // const action={
+        //     type:'save-edit',
+        //     firstName: localFirstName,
+        //     lastName: localLastName,
+        //     bio:localBio,
+        //     location: localLocation,
+        //     website: localWebsite,
+        //     dateOfBirth:localDateOfBirth
+        // };
+        // dispatch(action);
+        updateCurrentProfile(dispatch,{
             firstName: localFirstName,
             lastName: localLastName,
             bio:localBio,
             location: localLocation,
             website: localWebsite,
             dateOfBirth:localDateOfBirth
-        };
-        dispatch(action);
+        })
     }
 
     const exitEditClickHandler =() => {
@@ -37,14 +45,7 @@ const EditProfile = ()=> {
         // dispatch({type: 'no-edit'});
     }
 
-    updateCurrentProfile(dispatch,{
-        firstName: localFirstName,
-        lastName: localLastName,
-        bio:localBio,
-        location: localLocation,
-        website: localWebsite,
-        dateOfBirth:localDateOfBirth
-    })
+
 
         return(
             <>

@@ -11,6 +11,10 @@ const profile = (state = initialState,action) => {
                 profile: action.profile
             })
             break;
+        case 'update-current-profile':
+            return({
+                profile: action.profile
+            })
 
         case 'save-edit':
             return(
@@ -33,7 +37,5 @@ const profile = (state = initialState,action) => {
             return(state);
     }
 };
-
-
 
 export default profile;

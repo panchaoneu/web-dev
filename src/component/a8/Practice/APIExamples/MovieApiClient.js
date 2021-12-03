@@ -50,6 +50,10 @@ const MovieApiClient = () => {
                 <input className="form-control" value={movie.title}
                        onChange={onMovieTitleChange}
                        style={{width: "70%"}}/>
+                <button onClick={()=> setMovie(movie)}
+                        className="btn btn-primary float-end ms-2">
+                    Edit
+                </button>
 
                 <button onClick={createMovieClickHandler}
                         className="btn btn-success float-end ">
@@ -69,10 +73,7 @@ const MovieApiClient = () => {
                                 Delete
                             </button>
 
-                            <button onClick={()=> setMovie(movie)}
-                                    className="btn btn-primary float-end ms-2">
-                                Edit
-                            </button>
+
                             <button onClick={saveMovie}
                                     className="btn btn-primary ms-2 float-end ">
                                 Save
