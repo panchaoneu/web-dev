@@ -15,7 +15,7 @@ const EditProfile = ()=> {
 
     const dispatch= useDispatch();
 
-    useEffect(()=>{getCurrentProfile(dispatch)},[]);
+    useEffect(()=>getCurrentProfile(dispatch),[]);
 
     const saveEditClickHandler=()=>{
         // const action={
