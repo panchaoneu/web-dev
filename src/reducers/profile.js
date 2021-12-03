@@ -10,7 +10,6 @@ const profile = (state = initialState,action) => {
             return({
                 profile: action.profile
             })
-            break;
         case 'update-current-profile':
             return({
                 profile: action.profile
