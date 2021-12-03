@@ -20,14 +20,14 @@ const Movies = () => {
     const findMovieById = (movie) =>
         service.findMovieById(movie._id)
             .then(movie => setMovie(movie));
-    const updateMovie = (event) =>
-        setMovie({...movie, title: event.target.value});
-
-    const saveMovie = () =>
-        service.updateMovie(movie)
-            .then(() => setMovies(
-                movies.map(m => m._id === movie._id ? movie : m)
-            ));
+    // const updateMovie = (event) =>
+    //     setMovie({...movie, title: event.target.value});
+    //
+    // const saveMovie = () =>
+    //     service.updateMovie(movie)
+    //         .then(() => setMovies(
+    //             movies.map(m => m._id === movie._id ? movie : m)
+    //         ));
 
 
 
