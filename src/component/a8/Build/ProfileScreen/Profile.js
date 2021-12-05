@@ -1,8 +1,7 @@
 import React, {useEffect} from "react";
 import {Link} from "react-router-dom";
 import {useSelector, useDispatch} from "react-redux";
-import {getCurrentProfile,updateCurrentProfile} from "../../../../services/profileService";
-
+import {getCurrentProfile} from "../../../../services/profileService";
 
 
 const Profile = () => {
@@ -13,7 +12,7 @@ const Profile = () => {
     // const [localProfile, setLocalProfile] = useState(profile);
 
     const dispatch = useDispatch();
-    useEffect(() =>getCurrentProfile(dispatch),[])
+    useEffect(() =>getCurrentProfile(dispatch))
 
     const EditProfileClickHandler = (event) => {
         // setLocalProfile({...profile, firstName: event.target.firstName})
