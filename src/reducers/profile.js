@@ -6,15 +6,11 @@ const initialState = {
 
 const profile = (state = initialState,action) => {
     switch(action.type){
-        case 'getCurrentProfile':
-            return({
-                profile: action.profile
-            })
+        case 'get-current-profile':
+            return({...state, profile:action.profile})
         case 'update-current-profile':
-            return({
-                profile: action.profile
-            })
-
+            console.log(action.profile);
+            return({profile:action.profile})
         case 'save-edit':
             return(
                 {
@@ -28,6 +24,7 @@ const profile = (state = initialState,action) => {
                     }
 
                 });
+
         case 'exit-edit':
             return(state);
         case 'no-edit':

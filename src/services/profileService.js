@@ -10,17 +10,21 @@ export const getCurrentProfile=(dispatch)=>
     }));
 
 export const updateCurrentProfile=(dispatch,profile)=>
-    fetch(PROFILE_API, {
-        method:'PUT',
-        body: JSON.stringify(profile),
-        headers: {
-            'content-type': 'application/json'
-        }
+{
+    console.log(profile);
+    console.log("high");
+    return fetch(PROFILE_API, {
+    method:'PUT',
+    body: JSON.stringify(profile),
+    headers: {
+        'content-type': 'application/json'
+    }
+
     })
-.then(response=>response.json())
-.then(profile=>
-    dispatch({
-        type:'update-current-profile',
-        profile
-    })
-);
+        .then(response=>response.json())
+        .then(profile=>
+            dispatch({
+                type:'update-current-profile',
+                profile
+            })
+);}

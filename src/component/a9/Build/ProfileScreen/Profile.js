@@ -14,19 +14,16 @@ const Profile = () => {
         //         profile: localProfile
         //     })
         }
+
         return (
             <div>
                 <h3>Profile</h3>
-                {/*<input onChange={updateProfile}*/}
-                {/*    value={localProfile.username}/>*/}
-                {/*    <button>Save</button>*/}
-                {/*{JSON.stringify(profile)}*/}
 
                 <img className=" card-image" src={'../../../image/banner.jpg'} alt={""}/>
                 <img className="profile-image rounded-circle " src={'../../../image/jose.jpg'} alt={""}/>
 
                 <div className="d-flex justify-content-end mt-2">
-                    <Link to="/a7/twitter/editProfile">
+                    <Link to="/a8/twitter/editProfile">
                         <button className="btn btn-sm btn-outline-secondary rounded-pill ps-3 pe-3 text-white fw-bold"
                                 onClick={EditProfileClickHandler}>
                             Edit profile

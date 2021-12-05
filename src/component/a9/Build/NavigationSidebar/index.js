@@ -7,16 +7,16 @@ const NavigationSidebar = (
     return(
         <>
             <div className="list-group">
-                <Link to="/a7"
+                <Link to="/a8"
                       className="list-group-item">
                     <i className="fab fa-twitter"></i>
                 </Link>
-                <Link to="/a7/twitter/home"
+                <Link to="/a8/twitter/home"
                       className={`list-group-item ${active === 'home' ? 'active' : ''}`}>
                     <i className="fa fa-home"></i>
                     <span className="d-none d-xl-inline">Home</span>
                 </Link>
-                <Link to="/a7/twitter/explore"
+                <Link to="/a8/twitter/explore"
                       className={`list-group-item ${active === 'explore' ? 'active' : ''}`}>
                     <i className="fa fa-hashtag"></i>
                     <span className="d-none d-xl-inline">Explore</span>
@@ -41,7 +41,7 @@ const NavigationSidebar = (
                     <i className="fa fa-list"></i>
                     <span className="d-none d-xl-inline">Lists</span>
                 </a>
-                <Link to="/a7/twitter/profile"
+                <Link to="/a8/twitter/profile"
                     className={`list-group-item ${active === 'profile' ? 'active' : ''}`}>
                     <i className="fa fa-user"></i>
                     <span className="d-none d-xl-inline">Profile</span>

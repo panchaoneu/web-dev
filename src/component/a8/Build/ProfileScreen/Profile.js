@@ -1,10 +1,20 @@
-import React from "react";
-import {useSelector} from "react-redux";
+import React, {useEffect} from "react";
 import {Link} from "react-router-dom";
+import {useSelector, useDispatch} from "react-redux";
+import {getCurrentProfile,updateCurrentProfile} from "../../../../services/profileService";
+
+
 
 const Profile = () => {
-    const profile = useSelector(state => state.profile.profile);
+    const profile = useSelector(state => {
+        console.log(state);
+        console.log("state");
+        return state.profile.profile});
     // const [localProfile, setLocalProfile] = useState(profile);
+
+    const dispatch = useDispatch();
+    useEffect(() =>getCurrentProfile(dispatch),[])
+
     const EditProfileClickHandler = (event) => {
         // setLocalProfile({...profile, firstName: event.target.firstName})
         //
@@ -14,13 +24,10 @@ const Profile = () => {
         //         profile: localProfile
         //     })
         }
+
         return (
             <div>
                 <h3>Profile</h3>
-                {/*<input onChange={updateProfile}*/}
-                {/*    value={localProfile.username}/>*/}
-                {/*    <button>Save</button>*/}
-                {/*{JSON.stringify(profile)}*/}
 
                 <img className=" card-image" src={'../../../image/banner.jpg'} alt={""}/>
                 <img className="profile-image rounded-circle " src={'../../../image/jose.jpg'} alt={""}/>

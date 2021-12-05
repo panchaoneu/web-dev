@@ -18,13 +18,13 @@ const Build = () => {
     return(
         <Provider store={store}>
             <div>
-                <Route path={["/", "/a8/twitter/home"]}
+                <Route path={["/", "/a9/twitter/home"]}
                        exact={true} component={HomeScreen}/>
-                <Route path="/a8/twitter/explore"
+                <Route path="/a9/twitter/explore"
                        exact={true} component={ExploreScreen}/>
-                <Route path={["/", "/a8/twitter/profile"]}
+                <Route path={["/", "/a9/twitter/profile"]}
                        exact={true} component={ProfileScreen}/>
-                <Route path={["/", "/a8/twitter/editProfile"]}
+                <Route path={["/", "/a9/twitter/editProfile"]}
                        exact={true} component={EditProfileScreen}/>
 
             </div>

@@ -5,6 +5,8 @@ import {getCurrentProfile,updateCurrentProfile} from "../../../../services/profi
 
 const EditProfile = ()=> {
     const userProfile = useSelector((state)=>state.profile.profile);
+    const dispatch= useDispatch();
+    useEffect(()=>getCurrentProfile(dispatch));
 
     let [localFirstName, setFirstName]=useState(userProfile.firstName);
     let [localLastName, setLastName] = useState(userProfile.lastName);
@@ -13,21 +15,8 @@ const EditProfile = ()=> {
     let [localWebsite, setWebsite] = useState(userProfile.website);
     let [localDateOfBirth, setDateOfBirth] = useState(userProfile.dateOfBirth);
 
-    const dispatch= useDispatch();
-
-    useEffect(()=>getCurrentProfile(dispatch));
-
     const saveEditClickHandler=()=>{
-        // const action={
-        //     type:'save-edit',
-        //     firstName: localFirstName,
-        //     lastName: localLastName,
-        //     bio:localBio,
-        //     location: localLocation,
-        //     website: localWebsite,
-        //     dateOfBirth:localDateOfBirth
-        // };
-        // dispatch(action);
+        console.log(localFirstName);
         updateCurrentProfile(dispatch,{
             firstName: localFirstName,
             lastName: localLastName,
@@ -44,8 +33,6 @@ const EditProfile = ()=> {
         });
         // dispatch({type: 'no-edit'});
     }
-
-
 
         return(
             <>
