@@ -1,19 +1,16 @@
-import React from "react";
-import {useSelector} from "react-redux";
+import React, {useEffect} from "react";
+import {useSelector, useDispatch} from "react-redux";
 import {Link} from "react-router-dom";
+import {getCurrentProfile,updateCurrentProfile} from "../../services/profileService";
+
 
 const Profile = () => {
     const profile = useSelector(state => state.profile.profile);
     // const [localProfile, setLocalProfile] = useState(profile);
     const EditProfileClickHandler = (event) => {
-        // setLocalProfile({...profile, firstName: event.target.firstName})
-        //
-        // }
-        // const save=()=>{
-        //     dispatch({type:'update-profile',
-        //         profile: localProfile
-        //     })
         }
+    const dispatch = useDispatch();
+    useEffect(() =>getCurrentProfile(dispatch))
 
         return (
             <div>
@@ -23,7 +20,7 @@ const Profile = () => {
                 <img className="profile-image rounded-circle " src={'../../../image/jose.jpg'} alt={""}/>
 
                 <div className="d-flex justify-content-end mt-2">
-                    <Link to="/a8/twitter/editProfile">
+                    <Link to="/a9/twitter/editProfile">
                         <button className="btn btn-sm btn-outline-secondary rounded-pill ps-3 pe-3 text-white fw-bold"
                                 onClick={EditProfileClickHandler}>
                             Edit profile

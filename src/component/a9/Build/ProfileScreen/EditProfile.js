@@ -1,7 +1,8 @@
 import React, {useEffect, useState} from "react";
 import {useSelector, useDispatch} from "react-redux";
 import {Link} from "react-router-dom";
-import {getCurrentProfile,updateCurrentProfile} from "../../../../services/profileService";
+import {getCurrentProfile,updateCurrentProfile} from "../../services/profileService";
+
 
 const EditProfile = ()=> {
     const userProfile = useSelector((state)=>state.profile.profile);
@@ -36,14 +37,14 @@ const EditProfile = ()=> {
         return(
             <>
             <div className="d-flex">
-                <Link to="/a8/twitter/profile">
+                <Link to="/a9/twitter/profile">
                 <i className="fas fa-times text-white p-3"
                    onClick={exitEditClickHandler}></i> </Link>
                 <div className="text-white fw-bold ms-3 d-flex flex-grow-1 align-items-center">
                     Edit Profile
                 </div>
 
-                <Link to="/a8/twitter/profile" className="btn btn-sm bg-white text-black rounded-pill ps-3 p3-3 fw-bold"
+                <Link to="/a9/twitter/profile" className="btn btn-sm bg-white text-black rounded-pill ps-3 p3-3 fw-bold"
                     onClick={saveEditClickHandler}>
                     Save
                 </Link>
