@@ -1,15 +1,15 @@
 const URL = 'http://localhost:4000/rest/movies';
 
-const findAllMovies = () =>
+export const findAllMovies = () =>
     fetch(URL)
         .then(response => response.json());
 
-const deleteMovie = (id) =>
+export const deleteMovie = (id) =>
     fetch(`${URL}/${id}`, {
         method: 'DELETE',
     });
 
-const createMovie = (movie) =>
+export const createMovie = (movie) =>
     fetch(URL, {
         method: 'POST',
         body: JSON.stringify(movie),
@@ -18,11 +18,11 @@ const createMovie = (movie) =>
         }
     }).then(response => response.json());
 
-const findMovieById = (id) =>
+export const findMovieById = (id) =>
     fetch(`${URL}/${id}`)
         .then(response => response.json());
 
-const updateMovie = (movie) =>
+export const updateMovie = (movie) =>
     fetch(`${URL}/${movie._id}`, {
         method: 'PUT',
         body: JSON.stringify(movie),
@@ -32,6 +32,6 @@ const updateMovie = (movie) =>
     }).then(response => response.json());
 
 
-export default {
-    findAllMovies, deleteMovie, createMovie, findMovieById, updateMovie
-};
+// export default {
+//     findAllMovies, deleteMovie, createMovie, findMovieById, updateMovie
+// };
