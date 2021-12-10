@@ -13,7 +13,6 @@ const A8 = () => {
                 <Build/>
             </Route>
 
-
         </div>
     )
 }

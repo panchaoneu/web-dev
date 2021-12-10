@@ -3,6 +3,7 @@ import service from './service';
 
 const Movies = () => {
     const [movies, setMovies] = useState([]);
+    const [movie, setMovie] = useState({title: ''});
     useEffect(() =>
         service.findAllMovies()
             .then(movies => setMovies(movies)),[]);
@@ -16,18 +17,17 @@ const Movies = () => {
                 setMovies([
                     actualMovie, ...movies
                 ]));
-    const [movie, setMovie] = useState({title: ''});
     const findMovieById = (movie) =>
         service.findMovieById(movie._id)
             .then(movie => setMovie(movie));
-    // const updateMovie = (event) =>
-    //     setMovie({...movie, title: event.target.value});
-    //
-    // const saveMovie = () =>
-    //     service.updateMovie(movie)
-    //         .then(() => setMovies(
-    //             movies.map(m => m._id === movie._id ? movie : m)
-    //         ));
+    const updateMovie = (event) =>
+        setMovie({...movie, title: event.target.value});
+
+    const saveMovie = () =>
+        service.updateMovie(movie)
+            .then(() => setMovies(
+                movies.map(m => m._id === movie._id ? movie : m)
+            ));
 
 
 
@@ -41,9 +41,19 @@ const Movies = () => {
             <h2>Movies</h2>
             <ul className="list-group">
                 <li className="list-group-item">
+                    <button
+                        onClick={saveMovie}
+                        className="btn btn-primary float-end">
+                        Save
+                    </button>
+
                     <input
+                        onChange={updateMovie}
                         defaultValue={movie.title}
-                        className="form-control"/>
+                        className="form-control"
+                        style={{width: "50%"}}
+                    />
+
                 </li>
 
                 {
